@@ -1,0 +1,150 @@
+/* -----------------------
+    Color codes for website
+        #A593E0
+        #E0E3DA
+        #FFFFF3
+        #566270
+    ---------------------- */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #FFFFF3;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 95vh;
+    background-image:linear-gradient(to right bottom,
+    rgba(12, 12, 12, 0.5), 
+    rgba(91, 90, 92, 0.7)), url('../img/dream-bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.header_logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.header_logo {
+    height: 5rem;
+    width: auto;
+}
+
+/* --------------------
+---- Header Styles ----
+---------------------*/
+
+.header_text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.primary-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: #E0E3DA;
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
+}
+
+.primary-header--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    animation: moveInLeft 1s ease-out;
+}
+
+.primary-header--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+/* --------------------
+---- Page Buttons ----
+---------------------*/
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn--white {
+    background-color: #FFFFF3;
+    color: #A593E0;
+}
+
+.btn:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
