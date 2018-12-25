@@ -1,0 +1,31 @@
+.header {
+    height: 95vh;
+    background-image:linear-gradient(to right bottom,
+    rgba($color-black, 0.5), 
+    rgba($color-grey, 0.3)), url('../img/dream-bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+
+    &_logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &_logo {
+        height: 5rem;
+        width: auto;
+    }
+
+    &_text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
